@@ -41,7 +41,9 @@ const app = {
 
   favButtonChanger(ev) {
     //console.log('it worked!')
-    item.backgroundColor = "pink"
+    f = ev.target.parentElement
+    f.style.backgroundColor = "red"
+    
   },
 }
 
