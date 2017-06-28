@@ -19,6 +19,7 @@ const app = {
     favButton.textContent = "Favorite"
     favButton.setAttribute("class", "favButton")
     item.appendChild(favButton)
+    favButton.addEventListener('click', this.favButtonChanger)
     return item
   },
 
@@ -38,13 +39,10 @@ const app = {
     this.max ++
   },
 
-  //favColorChangerd
-
-  /*favChanger(favButton) {
-    document
-      .querySelector('.favButton')
-      .addEventListener('click', favColorChanger)
-  }*/
+  favButtonChanger(ev) {
+    //console.log('it worked!')
+    item.backgroundColor = "pink"
+  },
 }
 
 app.init({
