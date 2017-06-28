@@ -18,8 +18,20 @@ const app = {
     favButton = document.createElement('button')
     favButton.textContent = "Favorite"
     favButton.setAttribute("class", "favButton")
+    favButton.style.position = 'absolute'
+    favButton.style.right = '300px'
+
     item.appendChild(favButton)
     favButton.addEventListener('click', this.favButtonChanger)
+
+    deleteButton = document.createElement('button')
+    deleteButton.textContent = "Delete"
+    deleteButton.setAttribute("class", "deleteButton")
+    deleteButton.style.position = 'absolute'
+    deleteButton.style.right = '200px'
+    item.appendChild(deleteButton)
+    deleteButton.addEventListener('click', this.favButtonDeleter)
+    item.style.paddingBottom = '20px'
     return item
   },
 
@@ -40,11 +52,15 @@ const app = {
   },
 
   favButtonChanger(ev) {
-    //console.log('it worked!')
     f = ev.target.parentElement
-    f.style.backgroundColor = "red"
-    
+    f.style.backgroundColor = "#e7d5d5"
   },
+
+  favButtonDeleter(ev) {
+    f = ev.target.parentElement
+    f.remove(f)
+  },
+
 }
 
 app.init({
