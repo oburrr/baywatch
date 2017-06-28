@@ -1,27 +1,54 @@
 const app = {
-    init: function(formSelector) {
-        this.max = 0
-        document
-            .querySelector(formSelector)
-            .addEventListener(
-                'submit', 
-                this.handleSubmit.bind(this)
-            )
-    },
+  init(selectors) {
+    this.flicks = []
+    this.max = 0
+    this.list = document.querySelector(selectors.listSelector)
 
-    handleSubmit: function(ev) {
-        ev.preventDefault()
-        const f = ev.target
-        const flick = {
-            id: this.max + 1,
-            name: f.flickName.value,
-        }
+    document
+      .querySelector(selectors.formSelector)
+      .addEventListener(
+        'submit', 
+        this.handleSubmit.bind(this)
+      )
+  },
 
-        console.log(flick.name)
-        thix.max ++
-    },
+  renderListItem(flick) {
+    const item = document.createElement('li')
+    item.textContent = flick.name
+    favButton = document.createElement('button')
+    favButton.textContent = "Favorite"
+    favButton.setAttribute("class", "favButton")
+    item.appendChild(favButton)
+    return item
+  },
+
+  handleSubmit(ev) {
+    ev.preventDefault()
+    const f = ev.target
+    const flick = {
+      id: this.max + 1,
+      name: f.flickName.value,
+    }
+    const listItem = this.renderListItem(flick)
+    this.list.appendChild(listItem)
+    let i = flick.id - 1
+    this.flicks[i] = flick.name
+    console.log(this.flicks)
+
+    this.max ++
+  },
+
+  //favColorChangerd
+
+  /*favChanger(favButton) {
+    document
+      .querySelector('.favButton')
+      .addEventListener('click', favColorChanger)
+  }*/
 }
 
-
-
-app.init('form#flick-form')
+app.init({
+  formSelector:       'form#flick-form',
+  listSelector:       '#flick-list',
+  favButtonSelector:  '.favButton',
+})
