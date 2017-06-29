@@ -1,28 +1,41 @@
-# Michael Baywatch
+Michael Baywatch
 
-A catalog of Michael Bay's _extensive_  **filmography**.
+A catalog of Michael Bay's extensive filmography.
+Day 3 Homework
 
-## day 3 Homework
+    Store the flicks in an array, as well as in the DOM.
 
-*Store flick in an array as well as in the DOM
+Bonus Credit
 
-## Bonus Credit
+    Add a fav button to each list item
+    Make it change the appearance of that item. (e.g. Add a background color.)
 
-*Add a _fav_ button to each list item 
-*change the appearance of that item  (ex: add a background color)
+Mega Bonus Credit
 
+    Add a remove button to each list item.
+    Make that button actually work.
 
-## Super Mega Bonus Credit
+Super Mega Bonus Credit
 
-*Add a remove button to each list item, or a delete button
-*Make button work
+    Make sure that both of those button affect the array as well.
+    Make the fav button toggle the fav status.
 
-## Super Hyper Fighting Bonus Credit
+Super Mega Bonus Credit Hyper Fighting
 
-* Make sure that both of thsoe buttons affect the array as well
+    Add buttons that move a flick up and down the list.
 
-## more stuff
+Day 4 Homework
 
-* add buttons to move a flick up and down the list
+    Finish implementing move up and move down.
 
+Bonus Credit
 
+    Allow users to edit the names of existing flicks. Wouldn't it be nice if we could make that span's content editable?
+
+Super Mega Bonus Credit
+
+    Persist the data using localStorage. When you refresh the page, your flicks should still be there.
+
+Super Mega Bonus Credit Hyper Fighting
+
+    Allow users to filter the list of flicks.
