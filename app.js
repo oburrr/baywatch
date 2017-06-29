@@ -18,8 +18,6 @@ const app = {
     favButton = document.createElement('button')
     favButton.textContent = "Favorite"
     favButton.setAttribute("class", "favButton")
-    favButton.style.position = 'absolute'
-    favButton.style.right = '300px'
 
     item.appendChild(favButton)
     favButton.addEventListener('click', this.favButtonChanger)
@@ -27,11 +25,9 @@ const app = {
     deleteButton = document.createElement('button')
     deleteButton.textContent = "Delete"
     deleteButton.setAttribute("class", "deleteButton")
-    deleteButton.style.position = 'absolute'
-    deleteButton.style.right = '200px'
     item.appendChild(deleteButton)
     deleteButton.addEventListener('click', this.favButtonDeleter)
-    item.style.paddingBottom = '20px'
+   item.setAttribute("class", "item")
     return item
   },
 
